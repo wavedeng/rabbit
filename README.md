@@ -1,9 +1,9 @@
 # rabbit
-the most unpopular small and flexible front end framework
-[Explore rabbit's website](https://www.wavedeng.com)
-[Explore author's website](https://www.wavedeng.com)
+the most unpopular small and flexible front end framework  
+[explore rabbit's doc](https://www.wavedeng.com)  
+[explore author's website](https://www.wavedeng.com)
 
 # Start
-- 
+- [download directly](https://www.wavedeng.com)
 - Clone the repo: git clone https://github.com/wavedeng/rabbit.git
 - Install with npm npm install rabbit
