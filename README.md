@@ -1,5 +1,6 @@
 # rabbit
-the most unpopular small and flexible front end framework  
+the most unpopular small and flexible front end framework
+[rabbit](https://raw.githubusercontent.com/wavedeng/rabbit/master/rabbit.jpg)
 [explore rabbit's doc](https://www.wavedeng.com)  
 [explore author's website](https://www.wavedeng.com)
 
