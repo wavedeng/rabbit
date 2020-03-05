@@ -156,13 +156,6 @@ button {
   display: flex;
   align-items: center;
 }
-.rabbit-navbar .search-input {
-  height: 24px;
-  width: 150px;
-  border: 1px solid black;
-  border-radius: 12px;
-  padding: 0 1em;
-}
 .rabbit-navbar .navbar-link {
   transition: background-color 0.5s ease-in-out;
   border-radius: 2px;
@@ -188,6 +181,29 @@ button {
   background-color: black;
   height: 2px;
   border: 1px;
+}
+.search-group {
+  font-size: 0;
+  height: 28px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+.search-group .search-input {
+  border: none;
+  height: 100%;
+  width: 150px;
+  padding: 0 0 0 0.5rem;
+  font-size: 1.8rem;
+  background-color: white;
+}
+.search-group .search-button {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid black;
+  font-size: 1.8rem;
+  padding: 0 10px;
+  background-color: white;
 }
 @media screen and (max-device-width: 768px) {
   .rabbit-navbar {
@@ -222,8 +238,12 @@ button {
   .rabbit-navbar .navbar-middle .navbar-link:hover {
     background-color: #777777;
   }
-  .rabbit-navbar .navbar-middle .search-input {
-    margin-left: 10px;
+  .rabbit-navbar .navbar-middle .search-group {
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    margin-top: 100px;
+    transform: translateX(-50%);
   }
   .rabbit-navbar .navbar-right {
     margin-left: 20px;
@@ -347,33 +367,28 @@ button {
   color: #777777;
   border-color: #777777;
 }
-.rabbit-rectangle-button.style-1,
-.rabbit-capsule-button.style-1 {
+.button-style-1 {
   border-color: white;
   color: white;
-  background-color: white;
+  background-color: transparent;
 }
-.rabbit-rectangle-button.style-1:hover,
-.rabbit-capsule-button.style-1:hover {
+.button-style-1:hover {
   color: black;
   background-color: white;
 }
-.rabbit-rectangle-button.style-2,
-.rabbit-capsule-button.style-2 {
+.button-style-2 {
   background-color: transparent;
   overflow: hidden;
   position: relative;
+  display: inline-block;
 }
-.rabbit-rectangle-button.style-2:hover,
-.rabbit-capsule-button.style-2:hover {
+.button-style-2:hover {
   color: gray;
 }
-.rabbit-rectangle-button.style-2:hover:after,
-.rabbit-capsule-button.style-2:hover:after {
+.button-style-2:hover:after {
   transform: translateX(0);
 }
-.rabbit-rectangle-button.style-2:after,
-.rabbit-capsule-button.style-2:after {
+.button-style-2:after {
   position: absolute;
   display: block;
   content: " ";
@@ -386,24 +401,20 @@ button {
   transition: transform 0.3s ease;
   z-index: -1;
 }
-.rabbit-rectangle-button.style-3,
-.rabbit-capsule-button.style-3 {
+.button-style-3 {
   border: none;
   color: white;
   background-color: #05b564;
 }
-.rabbit-rectangle-button.style-3:hover,
-.rabbit-capsule-button.style-3:hover {
+.button-style-3:hover {
   background-color: #049c56;
 }
-.rabbit-rectangle-button.style-4,
-.rabbit-capsule-button.style-4 {
+.button-style-4 {
   border-color: #0089fe;
   color: #0089fe;
   background-color: transparent;
 }
-.rabbit-rectangle-button.style-4:hover,
-.rabbit-capsule-button.style-4:hover {
+.button-style-4:hover {
   color: white;
   background-color: #0089fe;
 }

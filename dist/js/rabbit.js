@@ -111,22 +111,46 @@
                     return;
                 }
 
+                //move to left
                 if (reverse) {
                     currentIndex--;
                     if (currentIndex < 0) {
                         currentIndex = slidersCount - 1;
                     }
-                    if (currentIndex == slidersCount - 2 - loopOffset) {
+
+                    if (currentIndex == slidersCount - 1 - loopOffset) {
                         loopOffset -= 1;
+                        if (loopOffset < 0) {
+                            loopOffset = slidersCount-1;
+                        }
                         loopOffset = loopOffset % slidersCount;
+ 
+                        slidersContainer.style.transition = "transform 0s ease";
+                        slidersContainer.style.transform = "translateX(" +(0-(slidersCount - 1)) * 100 + "%)";
+                        sliders = slidersContainer.querySelectorAll(".slider-item");
+
+                        for (let i = slidersCount - 1; i > 0; i--) {
+                            slidersContainer.insertBefore(sliders[i], slidersContainer.children[0]);
+                        }
+
+                        //requestAnimationFrame(() => {
+                        //    slidersContainer.style.transition = "transform " + transitionTime / 1000 + "s ease";
+                        //    slidersContainer.style.transform = "translateX(" + (0 - (slidersCount - 2)) * 100 + "%)";
+                        //});
+
                         setTimeout(() => {
-                            slidersContainer.style.transition = "transform 0s ease";
-                            slidersContainer.style.transform = "translateX("+(slidersCount-1)*100+"%)";
-                            sliders = slidersContainer.querySelectorAll(".slider-item");
-                            for (let i = slidersCount-1; i > 0 ; i--) {
-                                slidersContainer.insertBefore(sliders[i],slidersContainer.children[0]);
-                            }
-                        }, transitionTime);
+                            slidersContainer.style.transition = "transform " + transitionTime / 1000 + "s ease";
+                            slidersContainer.style.transform = "translateX(" + (0 - (slidersCount - 2)) * 100 + "%)";
+                        }, 100);
+
+                        if (withBalls == true) {
+                            balls.forEach(ball => {
+                                ball.classList.remove("current");
+                            })
+                            balls[currentIndex].classList.add("current");
+                        }
+
+                        return;
                     }
                 }
                 else {
@@ -368,7 +392,7 @@
     }
 
 
-   
+
     window.rabbit = _rabbit;
     return _rabbit;
 });
