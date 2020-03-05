@@ -1,0 +1,1285 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0031) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI - Rabbit</title>
+    <meta name="keywords" content="rabbit,邓维浩,wavedeng">
+    <meta name="description" content="the most unpopular front end framework">
+    <meta name="author" content="邓维浩">
+    <link rel="icon" href="http://www.wavedeng.com:8079/images/rabbit.ico" type="image/x-icon">
+    
+    
+        <link href="./UI - Rabbit_files/rabbit.css" rel="stylesheet">
+        <link href="./UI - Rabbit_files/site.css" rel="stylesheet">
+        <script src="./UI - Rabbit_files/rabbit.min.js.下载"></script>
+    
+</head>
+<body>
+    <nav class="rabbit-navbar" id="main-navbar">
+        <div class="navbar-left">Rabbit</div>
+        <div class="navbar-middle">
+            <a class="navbar-link  " href="http://www.wavedeng.com:8079/">首页</a>
+            <a class="navbar-link current-link" href="">UI组件</a>
+            <a class="navbar-link " href="http://www.wavedeng.com:8079/component">Rabbit框架</a>
+            <div class="search-group">
+                <input class="search-input" type="text" name="name" value="">
+                <button class="search-button  button-style-2" id="search-fake">search</button>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <p class="bread-menu">
+                <span class="bread-line"></span>
+                <span class="bread-line"></span>
+                <span class="bread-line"></span>
+            </p>
+        </div>
+    </nav>
+    
+<div class="rabbit-container main-container">
+    <div class="col-10 col-tablet-10 col-phone-12">
+        <section class="doc-section">
+            <h2 class="section-name" id="layout">布局</h2>
+            <p class="text-section">与bootstrap一样,rabbit将 <span class="class">.rabbit-container</span>分成了十二份,<span class="class">.rabbit-container</span>使用flex布局</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="flex">flex布局</h2>
+                <div class="layout-example color-green">
+                    <div class="rabbit-container">
+                        <div class="col-6">.col-6</div>
+                        <div class="col-6">.col-6</div>
+                    </div>
+                    <div class="rabbit-container">
+                        <div class="col-3">.col-3</div>
+                        <div class="col-9">.col-9</div>
+                    </div>
+                    <div class="rabbit-container">
+                            <div class="col-3">.col-3</div>
+                            <div class="col-3">.col-3</div>
+                            <div class="col-3">.col-3</div>
+                            <div class="col-3">.col-3</div>
+                    </div>
+                </div>
+
+                <pre class="code">      &lt;div class="rabbit-container"&gt;
+          &lt;div class="col-6"&gt;.col-6&lt;/div&gt;
+          &lt;div class="col-6"&gt;.col-6&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="rabbit-container"&gt;
+          &lt;div class="col-3"&gt;.col-3&lt;/div&gt;
+          &lt;div class="col-9"&gt;.col-9&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="rabbit-container"&gt;
+              &lt;div class="col-3"&gt;.col-3&lt;/div&gt;
+      &lt;/div&gt;
+                </pre>
+            </section>
+        </section>
+        <p class="rabbit-horizontal-isolation"></p>
+        <section class="doc-section">
+            <h2 class="section-name" id="responsive">响应式</h2>
+            <p class="text-section">rabbit提供响应式属性分别以desk、laptop、tablet、phone区分，小设备优先级较大</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="responsive-layout">布局</h2>
+                <div class="layout-example">
+                    <div class="rabbit-container">
+                        <div class="col-6 col-phone-3 col-tablet-4"></div>
+                        <div class="col-6 col-phone-3 col-tablet-4"></div>
+                        <div class="col-6 col-phone-3 col-tablet-4"></div>
+                        <div class="col-6 col-phone-3 col-tablet-4"></div>
+                    </div>
+                </div>
+                <p class="text-section">上面的内容在手机上显示4列，平板上显示3列，其他情况显示2列</p>
+                <pre class="code">      &lt;div class="rabbit-container"&gt;
+          &lt;div class="col-6 col-phone-3 col-tablet-4"&gt;&lt;/div&gt;
+          &lt;div class="col-6 col-phone-3 col-tablet-4"&gt;&lt;/div&gt;
+          &lt;div class="col-6 col-phone-3 col-tablet-4"&gt;&lt;/div&gt;
+          &lt;div class="col-6 col-phone-3 col-tablet-4"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="responsive-attribute">属性</h2>
+                <p class="text-section">rabbit使用show和hidden搭配desk、laptop、tablet控制元素在不同设备上的可见性</p>
+
+                <div class="example-container">
+                    <p class="hide-phone line-section">手机设备上看不到我</p>
+                    <p class="show-phone display-none line-section">只有手机设备看的见我</p>
+                </div>
+
+                <pre class="code">      &lt;p class="hide-phone"&gt;手机设备上看不到我&lt;/p&gt;
+      &lt;p class="show-phone display-none"&gt;只有手机设备看的见我&lt;/p&gt;
+  </pre>
+            </section>
+        </section>
+        <section class="doc-section">
+            <h2 class="section-name" id="nav">导航</h2>
+            <p class="text-section">丰富的导航条样式适应大部分导航情况</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="navbar">导航条</h2>
+                <div class="example-container">
+                    <nav class="rabbit-navbar dark bottom-5">
+                        <div class="navbar-left">logo</div>
+                        <div class="navbar-middle">
+                            <a class="navbar-link" href="#">index</a>
+                            <a class="navbar-link" href="#">blog</a>
+                            <a class="navbar-link" href="#">tutorials</a>
+                            <a class="navbar-link" href="#">index</a>
+                            <div class="search-group">
+                                <input class="search-input" type="text" name="name" value="">
+                                <button class="search-button button-style-2">search</button>
+                            </div>
+                        </div>
+                        <div class="navbar-right">
+                            <p class="bread-menu">
+                                <span class="bread-line"></span>
+                                <span class="bread-line"></span>
+                                <span class="bread-line"></span>
+                            </p>
+                        </div>
+                    </nav>
+                    <nav class="rabbit-navbar">
+                        <div class="navbar-left">logo</div>
+                        <div class="navbar-middle">
+                            <a class="navbar-link" href="#">index</a>
+                            <a class="navbar-link" href="#">blog</a>
+                            <a class="navbar-link" href="#">tutorials</a>
+                            <a class="navbar-link" href="#">index</a>
+                            <div class="search-group">
+                                <input class="search-input" type="text" name="name" value="">
+                                <button class="search-button">search</button>
+                            </div>
+                        </div>
+                        <div class="navbar-right">
+                            <p class="bread-menu">
+                                <span class="bread-line"></span>
+                                <span class="bread-line"></span>
+                                <span class="bread-line"></span>
+                            </p>
+                        </div>
+                    </nav>
+                </div>
+                <pre class="code">      &lt;nav class="rabbit-navbar dark bottom-5"&gt;
+          &lt;div class="navbar-left"&gt;logo&lt;/div&gt;
+          &lt;div class="navbar-middle"&gt;
+              &lt;a class="navbar-link" href="#"&gt;index&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;blog&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;tutorials&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;index&lt;/a&gt;
+              &lt;div class="search-group"&gt;
+                  &lt;input class="search-input" type="text" name="name" value="" /&gt;
+                  &lt;button class="search-button button-style-2"&gt;search&lt;/button&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="navbar-right"&gt;
+              &lt;p class="bread-menu"&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+              &lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/nav&gt;
+      &lt;nav class="rabbit-navbar"&gt;
+          &lt;div class="navbar-left"&gt;logo&lt;/div&gt;
+          &lt;div class="navbar-middle"&gt;
+              &lt;a class="navbar-link" href="#"&gt;index&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;blog&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;tutorials&lt;/a&gt;
+              &lt;a class="navbar-link" href="#"&gt;index&lt;/a&gt;
+              &lt;div class="search-group"&gt;
+                  &lt;input class="search-input" type="text" name="name" value="" /&gt;
+                  &lt;button class="search-button button-style-2"&gt;search&lt;/button&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="navbar-right"&gt;
+              &lt;p class="bread-menu"&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+                  &lt;span class="bread-line"&gt;&lt;/span&gt;
+              &lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/nav&gt;
+
+  </pre>
+                <pre class="code important">                    rabbit.init();//js组件需要初始化
+                </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="horizontal-nav">水平导航</h2>
+                <div class="example-container">
+                    <div class="rabbit-horizontal-nav">
+                        <span class="nav-link">passages</span>
+                        <span class="nav-link current">projects</span>
+                        <span class="nav-link">tutorials</span>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-horizontal-nav"&gt;
+          &lt;span class="nav-link"&gt;passages&lt;/span&gt;
+          &lt;span class="nav-link current"&gt;projects&lt;/span&gt;
+          &lt;span class="nav-link"&gt;tutorials&lt;/span&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="vertical-nav">竖直导航</h2>
+                <div class="example-container">
+                    <div class="rabbit-vertical-nav">
+                        <span class="nav-link">passages</span>
+                        <span class="nav-link current">projects</span>
+                        <span class="nav-link">tutorials</span>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-vertical-nav"&gt;
+          &lt;span class="nav-link"&gt;passages&lt;/span&gt;
+          &lt;span class="nav-link current"&gt;projects&lt;/span&gt;
+          &lt;span class="nav-link"&gt;tutorials&lt;/span&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="doc-nav">文档导航</h2>
+                <div class="example-container">
+                    <div class="rabbit-document-nav">
+                        <ul class="document-sections">
+                            <li class="document-section">
+                                <a class="section-name" href="#">Graphic font</a>
+                                <ul class="navs">
+                                    <li class="nav"><a href="#">all availible icons</a></li>
+                                    <li class="nav"><a href="#">how to use</a></li>
+                                    <li class="nav"><a href="#">instance</a></li>
+                                </ul>
+                            </li>
+                            <li class="document-section">
+                                <a class="section-name" href="#">Graphic font</a>
+                                <ul class="navs">
+                                    <li class="nav"><a href="#">all availible icons</a></li>
+                                    <li class="nav"><a href="#">how to use</a></li>
+                                    <li class="nav"><a href="#">instance</a></li>
+                                </ul>
+                            </li>
+                            <li class="document-section current-section">
+                                <a class="section-name" href="#">Graphic font</a>
+                                <ul class="navs">
+                                    <li class="nav"><a href="#">all availible icons</a></li>
+                                    <li class="nav current-nav"><a href="#">how to use</a></li>
+                                    <li class="nav"><a href="#">instance</a></li>
+                                </ul>
+                            </li>
+                            <li class="document-section">
+                                <a class="section-name" href="#">Graphic font</a>
+                                <ul class="navs">
+                                    <li class="nav"><a href="#">all availible icons</a></li>
+                                    <li class="nav"><a href="#">how to use</a></li>
+                                    <li class="nav"><a href="#">instance</a></li>
+                                </ul>
+                            </li>
+                            <li class="document-section ">
+                                <a class="section-name" href="#">Graphic font</a>
+                                <ul class="navs">
+                                    <li class="nav"><a href="#">all availible icons</a></li>
+                                    <li class="nav"><a href="#">how to use</a></li>
+                                    <li class="nav"><a href="#">instance</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-document-nav"&gt;
+          &lt;ul class="document-sections"&gt;
+              &lt;li class="document-section"&gt;
+                  &lt;a class="section-name" href="#"&gt;Graphic font&lt;/a&gt;
+                  &lt;ul class="navs"&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;all availible icons&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;how to use&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;instance&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class="document-section"&gt;
+                  &lt;a class="section-name" href="#"&gt;Graphic font&lt;/a&gt;
+                  &lt;ul class="navs"&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;all availible icons&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;how to use&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class="nav"&gt;&lt;a href="#"&gt;instance&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;                            
+          &lt;/ul&gt;
+      &lt;/div&gt;
+  </pre>
+                <pre class="code important">      rabbit.init();//js组件需要初始化
+      //每个 <span class="class">.nav</span>的href对应的元素在页面上必须存在，在找不到元素的情况下文档导航不会执行，查看报错找到丢失的元素
+      //通过更改 <span class="class">.current-section</span>和<span class="class">.current-nav</span>修改默认的激活样式
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="paginator">分页导航</h2>
+                <div class="example-container">
+                    <div class="rabbit-paginator">
+                        <a class="page-link">《</a>
+                        <a class="page-link">1</a>
+                        <a class="page-link">2</a>
+                        <a class="page-link">3</a>
+                        <a class="page-link current">4</a>
+                        <a class="page-link">5</a>
+                        <a class="page-link">》</a>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-paginator"&gt;
+          &lt;a class="page-link"&gt;《&lt;/a&gt;
+          &lt;a class="page-link"&gt;1&lt;/a&gt;
+          &lt;a class="page-link"&gt;2&lt;/a&gt;
+          &lt;a class="page-link"&gt;3&lt;/a&gt;
+          &lt;a class="page-link current"&gt;4&lt;/a&gt;
+          &lt;a class="page-link"&gt;5&lt;/a&gt;
+          &lt;a class="page-link"&gt;》&lt;/a&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="route-nav">路径导航</h2>
+                <div class="example-container">
+                    <div class="rabbit-route-nav">
+                        <span class="route">home</span>
+                        <span class="route">library</span>
+                        <span class="route">data</span>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-route-nav"&gt;
+          &lt;span class="route"&gt;home&lt;/span&gt;
+          &lt;span class="route"&gt;library&lt;/span&gt;
+          &lt;span class="route"&gt;data&lt;/span&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+
+        </section>
+        <p class="rabbit-horizontal-isolation"></p>
+
+        <section class="doc-section">
+            <h2 class="section-name" id="input">输入组件</h2>
+            <p class="text-section">丰富的导航条样式适应大部分导航条使用</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="form">表单</h2>
+                <div class="example-container">
+                    <div class="rabbit-form">
+                        <div class="form-item">
+                            <div class="item-fore">name</div>
+                            <input class="item-input" type="text" name="name" value="">
+                        </div>
+                        <div class="form-item">
+                            <div class="item-fore">email</div>
+                            <input class="item-input" type="text" name="email" value="">
+                            <div class="item-sub">.com</div>
+                        </div>
+                        <div class="form-item">
+                            <div class="item-fore">description</div>
+                            <textarea class="item-textarea" rows="6" type="text" name="description" value=""></textarea>
+                        </div>
+
+                        <div class="form-item image-item">
+                            <div class="item-fore">background</div>
+                            <div class="item-right">
+                                <input type="file" class="item-input" name="name" value="">
+                                <img src="./UI - Rabbit_files/avatar.jpg" class="image-preview" alt="Alternate Text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre class="code">      &lt;div class="rabbit-form"&gt;
+          &lt;div class="form-item"&gt;
+              &lt;div class="item-fore"&gt;name&lt;/div&gt;
+              &lt;input class="item-input" type="text" name="name" value="" /&gt;
+          &lt;/div&gt;
+          &lt;div class="form-item"&gt;
+              &lt;div class="item-fore"&gt;email&lt;/div&gt;
+              &lt;input class="item-input" type="text" name="email" value="" /&gt;
+              &lt;div class="item-sub"&gt;.com&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="form-item"&gt;
+              &lt;div class="item-fore"&gt;description&lt;/div&gt;
+              &lt;textarea class="item-textarea" rows="6" type="text" name="description" value=""&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-item image-item"&gt;
+              &lt;div class="item-fore"&gt;background&lt;/div&gt;
+              &lt;div class="item-right"&gt;
+                  &lt;input type="file" class="item-input" name="name" value="" /&gt;
+                  &lt;img src="./images/avatar.jpg" class="image-preview" alt="Alternate Text" /&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="button">按钮</h2>
+                <div class="example-container">
+                    <button class="rabbit-rectangle-button small-button">button</button>
+                    <button class="rabbit-rectangle-button">button</button>
+                    <button class="rabbit-rectangle-button big-button">button</button>
+                    <button class="rabbit-capsule-button">button</button>
+                    <button class="rabbit-rectangle-button button-style-1">button</button>
+                    <button class="rabbit-capsule-button button-style-1">button</button>
+                    <button class="rabbit-rectangle-button button-style-2">button</button>
+                    <button class="rabbit-capsule-button button-style-2">button</button>
+                    <button class="rabbit-rectangle-button button-style-3">button</button>
+                    <button class="rabbit-capsule-button button-style-3">button</button>
+                    <button class="rabbit-rectangle-button button-style-4">button</button>
+                    <button class="rabbit-capsule-button button-style-4">button</button>
+                </div>
+
+                <pre class="code">      &lt;button class="rabbit-rectangle-button small-button"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button big-button"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-capsule-button"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button button-style-1"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-capsule-button button-style-1"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button button-style-2"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-capsule-button button-style-2"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button button-style-3"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-capsule-button button-style-3"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-rectangle-button button-style-4"&gt;button&lt;/button&gt;
+      &lt;button class="rabbit-capsule-button button-style-4"&gt;button&lt;/button&gt;
+  </pre>
+            </section>
+        </section>
+        <p class="rabbit-horizontal-isolation"></p>
+
+        <section class="doc-section">
+            <h2 class="section-name" id="media">媒体组件</h2>
+            <p class="text-section">丰富的导航条样式适应大部分导航条使用</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="carousel">轮播图</h2>
+                <div class="example-container">
+                    <div class="rabbit-carousel" data-interval-time="4000" data-transition-time="1000">
+                        <div class="carousel-balls">
+                            <span class="carousel-ball"></span>
+                            <span class="carousel-ball"></span>
+                            <span class="carousel-ball current"></span>
+                        </div>
+                        <ul class="carousel-sliders" style="transition: transform 0s ease 0s; transform: translateX(0%);">
+                            
+                            
+                            
+                        <li class="slider-item">
+                                <img class="item-image" src="./UI - Rabbit_files/background3.jpg" alt="Alternate Text">
+                                <div class="item-shelter"></div>
+                            </li><li class="slider-item">
+                                <img class="item-image" src="./UI - Rabbit_files/background1.jpg" alt="Alternate Text">
+                                <div class="item-shelter"></div>
+                            </li><li class="slider-item">
+                                <img class="item-image" src="./UI - Rabbit_files/background2.jpg" alt="Alternate Text">
+                                <div class="item-shelter"></div>
+                            </li></ul>
+                        <div class="carousel-controllers-container">
+                            <p class="last carousel-controller"></p>
+                            <p class="next carousel-controller"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <pre class="code">      &lt;div class="rabbit-carousel" data-interval-time="4000" data-transition-time="1000"&gt;
+          &lt;div class="carousel-balls"&gt;
+              &lt;span class="carousel-ball"&gt;&lt;/span&gt;
+              &lt;span class="carousel-ball"&gt;&lt;/span&gt;
+              &lt;span class="carousel-ball"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;ul class="carousel-sliders"&gt;
+              &lt;li class="slider-item"&gt;
+                  &lt;img class="item-image" src="/images/background1.jpg" alt="Alternate Text" /&gt;
+                  &lt;div class="item-shelter"&gt;&lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li class="slider-item"&gt;
+                  &lt;img class="item-image" src="/images/background2.jpg" alt="Alternate Text" /&gt;
+                  &lt;div class="item-shelter"&gt;&lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li class="slider-item"&gt;
+                  &lt;img class="item-image" src="/images/background2.jpg" alt="Alternate Text" /&gt;
+                  &lt;div class="item-shelter"&gt;&lt;/div&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div class="carousel-controllers-container"&gt;
+              &lt;p class="last carousel-controller"&gt;&lt;/p&gt;
+              &lt;p class="next carousel-controller"&gt;&lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  </pre>
+                <pre class="code important">      rabbit.init();//js组件需要初始化
+      //若不需要导航球，删去 <span class="class"> .crousel-balls</span>
+      //若需要自定义换页按钮，删除 <span class="class">.last</span>与 <span class="class">.next</span>,并在自定义的元素添加相应class
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="comment">评论</h2>
+                <div class="example-container">
+                    <div class="rabbit-media">
+                        <div class="media-header">
+                            <img src="./UI - Rabbit_files/avatar.jpg" class="media-avatar" alt="Alternate Text">
+                        </div>
+                        <div class="media-body">
+                            <div class="body-top">
+                                <p class="media-title">Media Heading</p>
+                            </div>
+                            <p class="media-content">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis</p>
+                            <div class="body-bottom bottom-5">
+                                <span class="rabbit-image-text">
+                                    <img class="image" src="./UI - Rabbit_files/thumb_up.png" alt="Alternate Text">
+                                    <span class="text">thumb</span>
+                                </span>
+                                <span class="rabbit-image-text">
+                                    <img class="image" src="./UI - Rabbit_files/comment.png" alt="Alternate Text">
+                                    <span class="text">comment</span>
+                                </span>
+                            </div>
+                            <div class="rabbit-media">
+                                <div class="media-header">
+                                    <img src="./UI - Rabbit_files/avatar.jpg" class="media-avatar" alt="Alternate Text">
+                                </div>
+                                <div class="media-body">
+                                    <div class="body-top">
+                                        <p class="media-title">Media Heading</p>
+                                    </div>
+                                    <p class="media-content">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis</p>
+                                    <div class="body-bottom">
+                                        <span class="rabbit-image-text">
+                                            <img class="image" src="./UI - Rabbit_files/thumb_up.png" alt="Alternate Text">
+                                            <span class="text">thumb</span>
+                                        </span>
+                                        <span class="rabbit-image-text">
+                                            <img class="image" src="./UI - Rabbit_files/comment.png" alt="Alternate Text">
+                                            <span class="text">comment</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-media">
+                        <div class="media-header">
+                            <img src="./UI - Rabbit_files/avatar.jpg" class="media-avatar" alt="Alternate Text">
+                        </div>
+                        <div class="media-body">
+                            <div class="body-top">
+                                <p class="media-title">Media Heading</p>
+                            </div>
+                            <p class="media-content">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis</p>
+                            <div class="body-bottom">
+                                <span class="rabbit-image-text">
+                                    <img class="image" src="./UI - Rabbit_files/thumb_up.png" alt="Alternate Text">
+                                    <span class="text">thumb</span>
+                                </span>
+                                <span class="rabbit-image-text">
+                                    <img class="image" src="./UI - Rabbit_files/comment.png" alt="Alternate Text">
+                                    <span class="text">comment</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre class="code">      &lt;div class="rabbit-media"&gt;
+          &lt;div class="media-header"&gt;
+              &lt;img src="/images/avatar.jpg" class="media-avatar" alt="Alternate Text" /&gt;
+          &lt;/div&gt;
+          &lt;div class="media-body"&gt;
+              &lt;div class="body-top"&gt;
+                  &lt;p class="media-title"&gt;Media Heading&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;p class="media-content"&gt;Cras sit amet nib&lt;/p&gt;
+              &lt;div class="body-bottom bottom-5"&gt;
+                  &lt;span class="rabbit-image-text"&gt;
+                      &lt;img class="image" src="/images/thumb_up.png" alt="Alternate Text" /&gt;
+                      &lt;span class="text"&gt;thumb&lt;/span&gt;
+                  &lt;/span&gt;
+                  &lt;span class="rabbit-image-text"&gt;
+                      &lt;img class="image" src="/images/comment.png" alt="Alternate Text" /&gt;
+                      &lt;span class="text"&gt;comment&lt;/span&gt;
+                  &lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class="rabbit-media"&gt;
+                  &lt;div class="media-header"&gt;
+                      &lt;img src="/images/avatar.jpg" class="media-avatar" alt="Alternate Text" /&gt;
+                  &lt;/div&gt;
+                  &lt;div class="media-body"&gt;
+                      &lt;div class="body-top"&gt;
+                          &lt;p class="media-title"&gt;Media Heading&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;p class="media-content"&gt;Cras sit amet nibh liberos&lt;/p&gt;
+                      &lt;div class="body-bottom"&gt;
+                          &lt;span class="rabbit-image-text"&gt;
+                              &lt;img class="image" src="/images/thumb_up.png" alt="Alternate Text" /&gt;
+                              &lt;span class="text"&gt;thumb&lt;/span&gt;
+                          &lt;/span&gt;
+                          &lt;span class="rabbit-image-text"&gt;
+                              &lt;img class="image" src="/images/comment.png" alt="Alternate Text" /&gt;
+                              &lt;span class="text"&gt;comment&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+                </pre>
+
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="card">卡片</h2>
+                <div class="example-container cards-show">
+                    <div class="rabbit-card">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rabbit-card rabbit-card-1">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail rabbit-card-2">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-3">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-4">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-5">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-6">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-7">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/avatar.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!
+                            </div>
+                            <div class="tail-bottom">
+                                <h2 class="card-title">Fajar Siddiq</h2>
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-8">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rabbit-card rabbit-card-9">
+                        <div class="card-header">
+                            <img class="card-cover" src="./UI - Rabbit_files/card.jpg" alt="Alternate Text">
+                        </div>
+                        <div class="card-tail">
+                            <div class="tail-top">
+                                <p class="card-subtitle">2020.2.32</p>
+                            </div>
+                            <div class="tail-middle">
+                                <h2 class="card-title">hello,i must be the title</h2>
+                                <p class="card-desc">hello,i am some description</p>
+                            </div>
+                            <div class="tail-bottom">
+                                <span>WAVEDENG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-card rabbit-card-1"&gt;
+          &lt;div class="card-header"&gt;
+              &lt;img class="card-cover" src="/images/card.jpg" alt="Alternate Text" /&gt;
+          &lt;/div&gt;
+          &lt;div class="card-tail rabbit-card-2"&gt;
+              &lt;div class="tail-top"&gt;
+                  &lt;p class="card-subtitle"&gt;2020.2.32&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="tail-middle"&gt;
+                  &lt;h2 class="card-title"&gt;hello,i must be the title&lt;/h2&gt;
+                  &lt;p class="card-desc"&gt;hello,i am some description&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="tail-bottom"&gt;
+                  &lt;span&gt;WAVEDENG&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+                </pre>
+                <pre class="code important">      //目前rabbit提供9种卡片样式，html结构都如上.
+      //修改样式则更换 <span class="class">.rabbit-card-</span>的数字，删除 <span class="class">rabbit-card-*</span> 则为默认样式
+  </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="table">Table</h2>
+                <div class="example-container">
+                    <table class="rabbit-table">
+                        <tbody><tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>description</th>
+                            <th>url</th>
+                            <th>content</th>
+                            <th>viewcount</th>
+                            <th>index</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>wavedeng</td>
+                            <td>can you speak this</td>
+                            <td>www.wavedeng.com</td>
+                            <td>tell me why</td>
+                            <td>2012</td>
+                            <td>ind </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>wavedeng</td>
+                            <td>can you speak this</td>
+                            <td>www.wavedeng.com</td>
+                            <td>tell me why</td>
+                            <td>2012</td>
+                            <td>ind </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>wavedeng</td>
+                            <td>can you speak this</td>
+                            <td>www.wavedeng.com</td>
+                            <td>tell me why</td>
+                            <td>2012</td>
+                            <td>ind </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <pre class="code">      &lt;table class="rabbit-table"&gt;
+          &lt;tr&gt;
+              &lt;th&gt;id&lt;/th&gt;
+              &lt;th&gt;name&lt;/th&gt;
+              &lt;th&gt;description&lt;/th&gt;
+              &lt;th&gt;url&lt;/th&gt;
+              &lt;th&gt;content&lt;/th&gt;
+              &lt;th&gt;viewcount&lt;/th&gt;
+              &lt;th&gt;index&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;1&lt;/td&gt;
+              &lt;td&gt;wavedeng&lt;/td&gt;
+              &lt;td&gt;can you speak this&lt;/td&gt;
+              &lt;td&gt;www.wavedeng.com&lt;/td&gt;
+              &lt;td&gt;tell me why&lt;/td&gt;
+              &lt;td&gt;2012&lt;/td&gt;
+              &lt;td&gt;ind &lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+                </pre>
+            </section>
+
+        </section>
+
+        <section class="doc-section">
+            <h2 class="section-name" id="dynamic">动态组件</h2>
+            <p class="text-section">丰富的导航条样式适应大部分导航条使用</p>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="info">消息</h2>
+                <div class="example-container">
+                    <span class="rabbit-info rabbit-info-warn">you are warn</span>
+
+                    <span class="rabbit-info rabbit-info-success">you are right</span>
+
+                    <span class="rabbit-info rabbit-info-fail">you are wrong</span>
+                </div>
+
+                <pre class="code">      &lt;span class="rabbit-info-warn"&gt;you are warn&lt;/span&gt;
+
+      &lt;span class="rabbit-info-success"&gt;you are right&lt;/span&gt;
+
+      &lt;span class="rabbit-info-fail"&gt;you are wrong&lt;/span&gt;
+                </pre>
+                <div class="example-container">
+                    <button class="rabbit-rectangle-button style-3" id="show-good">点击展示好消息</button>
+                    <button class="rabbit-rectangle-button style-2" id="show-warn">点击展示中消息</button>
+                    <button class="rabbit-rectangle-button" id="show-bad">点击展示坏消息</button>
+                </div>
+
+                <pre class="code">      document.querySelector("#show-good").addEventListener("click", () =&gt; {
+          rabbit.showInfo("success", "好消息呀！", 1000);
+      });
+      document.querySelector("#show-warn").addEventListener("click", () =&gt; {
+          rabbit.showInfo("warn", "中消息呀！");
+      });
+      document.querySelector("#show-bad").addEventListener("click", () =&gt; {
+          rabbit.showInfo("fail", "坏消息呀！");
+      });
+  </pre>
+
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="modal">模态框</h2>
+                <div class="example-container">
+                    <div class="rabbit-modal" style="position:unset;transform:none;">
+                        <div class="modal-top">
+                            <p class="modal-title">modal title</p>
+                            <p class="modal-content">
+                                hello! every one!
+                                i truely want to say something,but i do not know.
+                                yeah, this is just some example texts,
+                                dont mind........
+                            </p>
+                        </div>
+                        <div class="modal-bottom">
+                            <button class="rabbit-rectangle-button">confirm</button>
+                            <button class="rabbit-rectangle-button">cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <pre class="code">      &lt;div class="rabbit-modal" style="position:unset;transform:none;"&gt;
+          &lt;div class="modal-top"&gt;
+              &lt;p class="modal-title"&gt;modal title&lt;/p&gt;
+              &lt;p class="modal-content"&gt;
+                  hello! every one!
+                  i truely want to say something,but i do not know.
+                  yeah, this is just some example texts,
+                  dont mind........
+              &lt;/p&gt;
+              &lt;button class="close-btn"&gt;X&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-bottom"&gt;&lt;/div&gt;
+              &lt;button class="rabbit-rectangle-button"&gt;confirm&lt;/button&gt;
+              &lt;button class="rabbit-rectangle-button"&gt;cancel&lt;/button&gt;
+      &lt;/div&gt;
+                </pre>
+                <div class="example-container">
+                    <button class="rabbit-rectangle-button" id="show-modal">点击展示模态框</button>
+                </div>
+                <pre class="code">      document.querySelector("#show-modal").addEventListener("click", () =&gt; {
+          rabbit.showModal("modal title", "hello! every one!\ni truely want to say something, \
+          but i do not know.\nyeah, this is just some example texts,\ndont mind........"
+          , "confirm"
+          , "cancel"
+          , () =&gt; { alert("confirm!!")}
+          , () =&gt; { alert("cancel") });
+      });
+                </pre>
+
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="dropdown">下拉菜单</h2>
+                <div class="example-container">
+                    <div class="rabbit-dropdown-group">
+                        <button class="rabbit-dropdown-trigger rabbit-rectangle-button">dropdown</button>
+                        <ul class="rabbit-dropdown-menu">
+                            <li class="menu-item">web</li>
+                            <li class="menu-item">web</li>
+                            <li class="menu-item">weblalal</li>
+                            <li class="menu-item">web</li>
+                        </ul>
+                    </div>
+                </div>
+                <pre class="code">      &lt;div class="rabbit-dropdown-group"&gt;
+          &lt;button class="rabbit-dropdown-trigger rabbit-rectangle-button"&gt;dropdown&lt;/button&gt;
+          &lt;ul class="rabbit-dropdown-menu"&gt;
+              &lt;li class="menu-item"&gt;web&lt;/li&gt;
+              &lt;li class="menu-item"&gt;web&lt;/li&gt;
+              &lt;li class="menu-item"&gt;weblalal&lt;/li&gt;
+              &lt;li class="menu-item"&gt;web&lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/div&gt;
+                </pre>
+                <pre class="code important">                    rabbit.init();//js组件需要初始化
+                </pre>
+            </section>
+        </section>
+        <p class="rabbit-horizontal-isolation"></p>
+
+        <section class="doc-section">
+            <h2 class="section-name" id="global-style">全局样式</h2>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="icon">图标</h2>
+                <div class="example-container">
+                    <span class="rabbit-image-text">
+                        <img class="image" src="./UI - Rabbit_files/thumb_up.png" alt="Alternate Text">
+                        <span class="text">thumb</span>
+                    </span>
+                    <span class="rabbit-image-text">
+                        <img class="image" src="./UI - Rabbit_files/comment.png" alt="Alternate Text">
+                        <span class="text">comment</span>
+                    </span>
+
+                    <span class="rabbit-image-text vertical">
+                        <img class="image" src="./UI - Rabbit_files/time.png" alt="Alternate Text">
+                        <span class="text">time</span>
+                    </span>
+                    <span class="rabbit-image-text vertical">
+                        <img class="image" src="./UI - Rabbit_files/normal.png" alt="Alternate Text">
+                        <span class="text">normal</span>
+                    </span>
+                </div>
+                <pre class="code">      &lt;span class="rabbit-image-text"&gt;
+          &lt;img class="image" src="./images/thumb_up.png" alt="Alternate Text" /&gt;
+          &lt;span class="text"&gt;thumb&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;span class="rabbit-image-text"&gt;
+          &lt;img class="image" src="./images/comment.png" alt="Alternate Text" /&gt;
+          &lt;span class="text"&gt;comment&lt;/span&gt;
+      &lt;/span&gt;
+
+      &lt;span class="rabbit-image-text vertical"&gt;
+          &lt;img class="image" src="./images/time.png" alt="Alternate Text" /&gt;
+          &lt;span class="text"&gt;time&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;span class="rabbit-image-text vertical"&gt;
+          &lt;img class="image" src="./images/normal.png" alt="Alternate Text" /&gt;
+          &lt;span class="text"&gt;normal&lt;/span&gt;
+      &lt;/span&gt;
+                </pre>
+            </section>
+            <section class="section-sub">
+                <h2 class="section-sub-name" id="attribute">属性</h2>
+                <p class="text-section">my stupid habit!</p>
+                <pre class="code">  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    line-height: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+html {
+    font-size: percentage(10/16);
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.right-5 {
+    margin-right: 5px;
+}
+
+.inner-right-5 {
+    padding-right: 5px;
+}
+
+.right-10 {
+    margin-right: 10px;
+}
+
+.inner-right-10 {
+    padding-right: 10px;
+}
+
+.bottom-5 {
+    margin-bottom: 5px;
+}
+
+.bottom-10 {
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+.font-small {
+    font-size: 1.4rem;
+}
+
+.font-normal {
+    font-size: 1.6rem;
+}
+
+.font-big {
+    font-size: 1.8rem;
+}
+
+.font-large {
+    font-size: 2.0rem;
+}
+
+.font-main {
+    font-size: 4.0rem;
+}
+
+.color-gray {
+    color: #777777;
+}
+
+.color-lightgray {
+    color: #dddddd;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-black {
+    color: black;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-white {
+    color: white;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
+                </pre>
+            </section>
+        </section>
+
+    </div>
+    <div class="col-2 col-tablet-2 hide-phone">
+        <div class="rabbit-document-nav fix-top">
+            <ul class="document-sections">
+                <li class="document-section current-section">
+                    <a class="section-name" href="#layout">布局</a>
+                    <ul class="navs">
+                        <li class="nav current-nav"><a href="#flex">flex布局</a></li>
+                    </ul>
+                </li>
+                <li class="document-section">
+                    <a class="section-name" href="#responsive">响应式</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#responsive-layout">响应式布局</a></li>
+                        <li class="nav"><a href="#responsive-attribute">响应式属性</a></li>
+                    </ul>
+                </li>
+                <li class="document-section">
+                    <a class="section-name" href="#nav">导航</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#navbar">导航条</a></li>
+                        <li class="nav"><a href="#horizontal-nav">水平导航</a></li>
+                        <li class="nav"><a href="#vertical-nav">竖直导航</a></li>
+                        <li class="nav"><a href="#doc-nav">文档导航</a></li>
+                        <li class="nav"><a href="#paginator">分页导航</a></li>
+                    </ul>
+                </li>
+                <li class="document-section">
+                    <a class="section-name" href="#input">输入组件</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#form">表单</a></li>
+                        <li class="nav"><a href="#button">按钮</a></li>
+                    </ul>
+                </li>
+                <li class="document-section">
+                    <a class="section-name" href="#media">媒体组件</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#carousel">轮播图</a></li>
+                        <li class="nav"><a href="#comment">评论</a></li>
+                        <li class="nav"><a href="#card">卡片</a></li>
+                        <li class="nav"><a href="#table">table</a></li>
+                    </ul>
+                </li>
+                <li class="document-section ">
+                    <a class="section-name" href="#dynamic">动态组件</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#info">消息</a></li>
+                        <li class="nav"><a href="#modal">模态框</a></li>
+                        <li class="nav"><a href="#dropdown">下拉菜单</a></li>
+                    </ul>
+                </li>
+                <li class="document-section ">
+                    <a class="section-name" href="#global-style">全局样式</a>
+                    <ul class="navs">
+                        <li class="nav"><a href="#icon">图标</a></li>
+                        <li class="nav"><a href="#attribute">属性</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    document.querySelector("#show-modal").addEventListener("click", () => {
+        rabbit.showModal("modal title", "hello! every one!\ni truely want to say something, but i do not know.\n\
+yeah, this is just some example texts,\ndont mind........", "confirm", "cancel", () => { alert("confirm!!") }, () => { alert("cancel") });
+    });
+
+    (function initShowInfo() {
+        document.querySelector("#show-good").addEventListener("click", () => {
+            rabbit.showInfo("success", "好消息呀！", 1000);
+        });
+        document.querySelector("#show-warn").addEventListener("click", () => {
+            rabbit.showInfo("warn", "中消息呀！");
+        });
+        document.querySelector("#show-bad").addEventListener("click", () => {
+            rabbit.showInfo("fail", "坏消息呀！");
+        });
+    })();
+</script>
+
+
+    
+    
+    
+
+    
+
+
+
+<script>
+    rabbit.init();
+    document.querySelector("#search-fake").addEventListener("click", () => { alert("This is a fake search bar....hhh") });
+</script>
+</body></html>
