@@ -160,8 +160,8 @@ button {
     cursor: pointer;
 }
 
-.display-none{
-    display:none;
+.display-none {
+    display: none;
 }
 
 
@@ -222,13 +222,7 @@ button {
         align-items: center;
     }
 
-    .search-input {
-        height: 24px;
-        width: 150px;
-        border: 1px solid black;
-        border-radius: 12px;
-        padding: 0 1em;
-    }
+
 
     .navbar-link {
         transition: background-color 0.5s ease-in-out;
@@ -265,6 +259,32 @@ button {
     }
 }
 
+
+.search-group {
+    font-size: 0;
+    height: 28px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 2px;
+
+    .search-input {
+        border: none;
+        height: 100%;
+        width: 150px;
+        padding: 0 0 0 0.5rem;
+        font-size: 1.8rem;
+        background-color: white;
+    }
+
+    .search-button {
+        height: 100%;
+        display: inline-block;
+        border-left: 1px solid black;
+        font-size: 1.8rem;
+        padding: 0 10px;
+        background-color:white;
+    }
+}
 
 
 
@@ -307,8 +327,18 @@ button {
                 }
             }
 
-            .search-input {
-                margin-left: 10px;
+            .search-group {
+                white-space: nowrap;
+                position: absolute;
+                left: 50%;
+                margin-top: 100px;
+                transform: translateX(-50%);
+
+                .search-input {
+                }
+
+                .search-button {
+                }
             }
         }
 
@@ -401,8 +431,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    max-width:100%;
+    max-width: 100%;
+
     &.pop-up {
         position: fixed;
         left: 50%;
@@ -482,25 +512,25 @@ button {
 }
 
 
-.rabbit-rectangle-button.style-1, .rabbit-capsule-button.style-1 {
+.button-style-1 {
     border-color: white;
     color: white;
-    background-color: white;
-
+    background-color: transparent;
     &:hover {
         color: black;
         background-color: white;
     }
 }
 
-.rabbit-rectangle-button.style-2, .rabbit-capsule-button.style-2 {
+.button-style-2 {
     background-color: transparent;
     overflow: hidden;
     position: relative;
+    display:inline-block;
+    
 
     &:hover {
         color: gray;
-
         &:after {
             transform: translateX(0);
         }
@@ -521,7 +551,7 @@ button {
     }
 }
 
-.rabbit-rectangle-button.style-3, .rabbit-capsule-button.style-3 {
+.button-style-3 {
     border: none;
     color: white;
     background-color: #05b564;
@@ -532,7 +562,7 @@ button {
 }
 
 
-.rabbit-rectangle-button.style-4, .rabbit-capsule-button.style-4 {
+.button-style-4 {
     border-color: #0089fe;
     color: #0089fe;
     background-color: transparent;
@@ -588,7 +618,7 @@ button {
             line-height: 2.2rem;
             border: none;
             border-left: 1px solid @gray;
-            text-indent:1rem;
+            text-indent: 1rem;
         }
 
         .item-textarea {
@@ -763,8 +793,8 @@ button {
     border: 1px solid gray;
     font-size: 1.6rem;
     border-collapse: collapse;
-    max-width:100%;
-    overflow:hidden;
+    max-width: 100%;
+    overflow: hidden;
 
     tr {
         line-height: 2.4rem;
